@@ -1,0 +1,27 @@
+{
+  "general": {
+    "designResolution": {
+      "width": 640,
+      "height": 960,
+      "fitWidth": true,
+      "fitHeight": true
+    }
+  },
+  "physics": {
+    "collisionGroups": [
+      {
+        "index": 1,
+        "name": "player"
+      },
+      {
+        "index": 2,
+        "name": "waste"
+      }
+    ],
+    "collisionMatrix": {
+      "0": 1,
+      "1": 4,
+      "2": 2
+    }
+  }
+}
