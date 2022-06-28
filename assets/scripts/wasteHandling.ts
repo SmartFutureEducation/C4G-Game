@@ -1,5 +1,5 @@
 
-import { _decorator, Component, Animation, Node, Collider, ITriggerEvent, PhysicsSystem2D, BoxCollider2D, Contact2DType, Collider2D, IPhysics2DContact } from 'cc';
+import { _decorator, Component, Animation, Node, Collider, ITriggerEvent, PhysicsSystem2D, BoxCollider2D, Contact2DType, Collider2D, IPhysics2DContact, Label } from 'cc';
 const { ccclass, property } = _decorator;
 
 /**
@@ -14,6 +14,9 @@ const { ccclass, property } = _decorator;
  
 @ccclass('wasteHandling')
 export class wasteHandling extends Component {
+
+    @property(Node)
+    scoreBoard: Node = null
 
     // reference full scripts from help doc https://docs.cocos.com/creator/manual/en/physics-2d/physics-2d-contact-callback.html
     start () {
@@ -38,6 +41,9 @@ export class wasteHandling extends Component {
     onBeginContact (selfCollider: Collider2D, otherCollider: Collider2D, contact: IPhysics2DContact | null) {
         // will be called once when two colliders begin to contact
         console.log('onBeginContact');
+
+        this.scoreBoard.getComponent(Label).string = (Number(this.scoreBoard.getComponent(Label).string) + 10).toString()
+
 
         // const animationComponent = this.node.getComponent(Animation);
         // animationComponent.play()

@@ -1,5 +1,6 @@
 
 import { _decorator, Component, Node, Prefab, instantiate, math } from 'cc';
+import { wasteHandling } from './wasteHandling';
 const { ccclass, property } = _decorator;
 
  
@@ -19,6 +20,8 @@ export class wasteManager extends Component {
             newWasteItem = instantiate(this.wastePrefab)
 
             newWasteItem.parent = this.wasteItemsRoot
+            newWasteItem.getComponent(wasteHandling).scoreBoard = this.node.parent.getChildByName('MyScoreBoard')
+
             newWasteItem.active = true
 
             let number1 = 10
