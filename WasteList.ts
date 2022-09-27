@@ -4,10 +4,10 @@ export enum Waste_Type_Enum {
 }
 
 let wasteItemsMap = new Map<string, Waste_Type_Enum>([  // Ref: https://howtodoinjava.com/typescript/maps/
-    ["gwaste_plastic_straws", Waste_Type_Enum.General_Waste],
-    ["gwaste_toy", Waste_Type_Enum.General_Waste],
-    ["recycle_cardboard", Waste_Type_Enum.Recycling],
-    ["recycle_plastic_bottles", Waste_Type_Enum.Recycling],
+    ["plastic_straws", Waste_Type_Enum.General_Waste],
+    ["toy", Waste_Type_Enum.General_Waste],
+    ["cardboard", Waste_Type_Enum.Recycling],
+    ["plastic_bottles", Waste_Type_Enum.Recycling],
     ["plastic_wrap", Waste_Type_Enum.General_Waste],
     ["pizza_box", Waste_Type_Enum.Recycling],
     ["egg_carton", Waste_Type_Enum.Recycling],
